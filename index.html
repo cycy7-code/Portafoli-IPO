@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body style="background: #000;">
+    <main id="hero">
+        <div class="promo">
+            <header class="mb-2 px-4 shadow" style="background-color: #000;">
+                <div class="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div style="height: 70px; width: 70px;">
+                    <a href="./index.html">
+                        <img src="logo.jpeg" alt="Mi logo" class="rounded">
+                </div>
+                  
+                    <a class="flex items-center text-2xl font-black">
+                        <span class="mr-2 text-3xl text-blue-600"></span>
+                        <span style="color: white;">Portafoli Raúl</span>
+                    </a>
+                        <input class="peer hidden" type="checkbox" id="navbar-open"/>
+
+                    <label class="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden" for="navbar-open">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
+                    </label>
+                    
+                    <nav aria-label="Header Navigation" class="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0">
+                        <ul class="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
+                            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+                            focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
+                            rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                            <a href="./AC.html">Activitats Complementàries</a></button>
+                            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+                            focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
+                            rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                            <a href="./PP.html">Perfil Professional</a></button>
+                            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+                            focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
+                            rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                            <a href="./SS.html">Soft Skills</a></button>
+                            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+                            focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
+                            rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                            <a href="./A.html">Autocandidatura</a></button>
+                            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+                            focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
+                            rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                            <a href="./EL.html">Experiència Laboral</a></button>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="w-full h-full flex justify-center items-center Montserrat font-bold mt-64 text-8xl" style="color: white; text-align: center;">
+                <h1 id="typewriter"></h1>
+            </div>
+            
+            <script>
+            const words = ["HOLA!👋", "BENVINGUTS AL MEU PORTFOLI!", "HELLO!"];
+            let i = 0;
+            let j = 0;
+            let currentWord = "";
+            let isDeleting = false;
+            
+            function type() {
+              currentWord = words[i];
+              if (isDeleting) {
+                document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+                j--;
+                if (j == 0) {
+                  isDeleting = false;
+                  i++;
+                  if (i == words.length) {
+                    i = 0;
+                  }
+                }
+              } else {
+                document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+                j++;
+                if (j == currentWord.length) {
+                  isDeleting = true;
+                }
+              }
+              setTimeout(type,200);
+            }
+            
+            type();
+            </script>
+
+
+
+                    
+                    <h1 style="color: white; text-align: center;" class="mt-12 text-6xl"><span class="Montserrat font-bold">SOC RAÚL MÁRQUEZ PARENTE</span></h1>
+        </div>
+
+
+        
+<div class="video.container">
+    <video muted autoplay loop>
+    <source src="ezyZip.mp4"
+    type="video/mp4">
+    </video>
+</div>
+
+</main>
+</body>
+
+</html>
