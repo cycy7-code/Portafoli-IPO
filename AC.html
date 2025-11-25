@@ -8,9 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.78/build/spline-viewer.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body { height: 100%; }
+    </style>
 </head>
 
-<body style="background: #000;">
+<body style="background: #000; min-height: 100%;">
     <header class="mb-2 px-4 shadow" style="background-color: #000;">
         <div class="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
             
@@ -26,65 +29,97 @@
 
             <label class="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden" for="navbar-open">
                 <span class="sr-only">Toggle Navigation</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32-14.3 32 32z" /></svg>
             </label>
             
             <nav aria-label="Header Navigation" class="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0">
-                <ul class="flex flex-col gap-y-4 sm:flex-row sm:gap-x-">
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2">
-                    <a href="./AC.html">Activitats Complementàries</a></button>
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2">
-                    <a href="./PP.html">Perfil Professional</a></button>
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2">
-                    <a href="./SS.html">Soft Skills</a></button>
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2">
-                    <a href="./A.html">Autocandidatura</a></button>
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-4 py-2.5 text-center me-2 mb-2">
-                    <a href="./EL.html">Experiència Laboral</a></button>
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-                    <a href="./CA.html">Certificats Acadèmics</a></button> 
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                          focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                          rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-                          <a href="./Activitat Adaptació al canvi.html">Activitat Adaptació al Canvi</a></button> 
-                        </ul>
-                    </nav>
+    <ul class="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-4">
+
+        <a href="./AC.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-4 py-2.5 text-center mb-2">
+            Activitats Complementàries
+        </a>
+
+        <a href="./PP.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-4 py-2.5 text-center mb-2">
+            Perfil Professional
+        </a>
+
+        <a href="./SS.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-4 py-2.5 text-center mb-2">
+            Soft Skills
+        </a>
+
+        <a href="./A.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-4 py-2.5 text-center mb-2">
+            Autocandidatura
+        </a>
+
+        <a href="./EL.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-4 py-2.5 text-center mb-2">
+            Experiència Laboral
+        </a>
+
+        <a href="./CA.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-5 py-2.5 text-center mb-2">
+            Certificats Acadèmics
+        </a>
+
+        <a href="./Activitat Adaptació al canvi.html" 
+           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
+                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
+                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
+                  px-5 py-2.5 text-center mb-2">
+            Activitat Adaptació al Canvi
+        </a>
+
+    </ul>
+</nav>
                 </div>
             </header>
         </div>
 
-<div class="relative h-screen w-screen w">
+<div class="relative min-h-full w-screen">
     <div class="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"></div>
-    <h1 style="color: white; text-align: center;" class="mt-40 text-8xl"><span class="Montserrat font-bold">ACTIVITATS</span></h1>
-    <h1 style="color: white; text-align: center;" class="mt-12 text-6xl"><span class="Montserrat font-bold">COMPLEMENTÀRIES</span></h1>
-    <h1 style="color: white; text-align: center;" class="mt-12 text-3xl"><span class="Montserrat font-bold">EN AQUESTA PÀGINA TROBARÀS INFORMACIÓ SOBRE LES MEVES ACTIVITATS COMPLEMENTÀRIES</span></h1>
+    <h1 style="color: white; text-align: center;" class="mt-40 text-9xl"><span class="Montserrat font-bold">SMX 1 CURS</span></h1>
+    <h1 style="color: white; text-align: center;" class="mt-12 text-8xl"><span class="Montserrat font-bold">ACTIVITATS</span></h1>
+    <h1 style="color: white; text-align: center;" class="mt-4 text-6xl"><span class="Montserrat font-bold">COMPLEMENTÀRIES</span></h1>
+    <h1 style="color: white; text-align: center;" class="mt-4 text-3xl"><span class="Montserrat font-bold">EN AQUESTA PÀGINA TROBARÀS INFORMACIÓ SOBRE LES MEVES ACTIVITATS COMPLEMENTÀRIES</span></h1>
         
-<div class="parent Montserrat font-bold mt-12 grid grid-cols-2 grid-rows-1" style="color: white; border: rgb(250, 0, 0); border-radius: 5%;">
-    <div class="flex justify-center" style="border-radius: 10%; border: 0ch;">
-        <img src="./imagen1.jpg" class="justify-center items-center  w-2/3" style="border-radius: 10%;">
+    <div class="parent Montserrat font-bold mt-12 grid grid-cols-2 grid-rows-1" style="color: white; border: rgb(250, 0, 0); border-radius: 5%;">
+        <div class="flex justify-center" style="border-radius: 10%; border: 0ch;">
+            <img src="./imagen1.jpg" class="justify-center items-center  w-2/3" style="border-radius: 10%;">
+        </div>
+        <div class="Montserrat font-bold" style="border-radius: 10%; border: 0ch; margin-right: 10%;">
+            <h1 class="text-justify text-2xl">Aquest dia ens vam anar d'excursió les dues classes de SMX a Terrassa per a visitar un museu molt important a Catalunya, visitem per torns el Museu Nacional de la Ciència i la Tècnica de Catalunya (MNACTEC).
+                Aquell dia vaig aprendre com va evolucionar la història de la tecnologia i vaig poder veure per persona antics ordinadors i màquines històriques com la màquina Enigma.
+            </h1>
+        </div>
     </div>
-    <div class="Montserrat font-bold" style="border-radius: 10%; border: 0ch; margin-right: 10%;">
-        <h1 class="text-justify text-2xl">Aquest dia ens vam anar d'excursió les dues classes de SMX a Terrassa per a visitar un museu molt important a Catalunya, visitem per torns el Museu Nacional de la Ciència i la Tècnica de Catalunya (MNACTEC).
-            Aquell dia vaig aprendre com va evolucionar la història de la tecnologia i vaig poder veure per persona antics ordinadors i màquines històriques com la màquina Enigma.
-        </h1>
-    </div>
-        
+
+    <!-- Separador grueso y texto centrado al final -->
+    <hr class="my-20 border-t-[28px] border-black rounded-full w-3/4 mx-auto">
+    <h1 style="color: white; text-align: center;" class="mt-16 text-9xl"><span class="Montserrat font-bold">SMX 2 CURS</span></h1>
 </div>
-    
 
-</main>
+
 </body>
-
 </html>
