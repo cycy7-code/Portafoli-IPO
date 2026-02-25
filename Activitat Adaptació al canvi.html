@@ -1,141 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafoli - Raúl Márquez Parente</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.78/build/spline-viewer.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="logo.jpeg"/>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .Montserrat { font-family: 'Montserrat', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 
-<body style="background: #000;">
-    <header class="mb-2 px-4 shadow" style="background-color: #000;">
-        <div class="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-            
-            <div style="height: 70px; width: 70px;">
-                <a href="./index.html">
-                    <img src="logo.jpeg" alt="Mi logo" class="rounded">
-            </div>
-            <a class="flex items-center text-2xl font-black">
-                <span class="mr-2 text-3xl text-blue-600"></span>
-                <span style="color: white;">Portafoli Raúl</span>
-            </a>
-                <input class="peer hidden" type="checkbox" id="navbar-open"/>
+<body class="bg-black text-white min-h-screen">
 
-            <label class="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden" for="navbar-open">
-                <span class="sr-only">Toggle Navigation</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
+    <header class="mb-2 px-4 shadow bg-black border-b border-gray-900">
+        <div class="relative mx-auto flex max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+            
+            <div class="flex items-center">
+                <div style="height: 60px; width: 60px;" class="mr-4">
+                    <a href="./index.html">
+                        <img src="logo.jpeg" alt="Mi logo" class="rounded-lg object-cover h-full w-full">
+                    </a>
+                </div>
+                <a href="./index.html" class="flex items-center text-2xl font-black">
+                    <span class="text-white">Portafoli Raúl</span>
+                </a>
+            </div>
+
+            <input class="peer hidden" type="checkbox" id="navbar-open"/>
+            <label class="absolute right-0 top-8 cursor-pointer text-xl sm:hidden" for="navbar-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="white" viewBox="0 0 448 512"><path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
             </label>
             
-            <nav aria-label="Header Navigation" class="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0">
-    <ul class="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-4">
-
-        <a href="./AC.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Activitats Complementàries
-        </a>
-
-        <a href="./PP.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Perfil Professional
-        </a>
-
-        <a href="./SS.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Soft Skills
-        </a>
-
-        <a href="./A.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Autocandidatura
-        </a>
-
-        <a href="./EL.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Experiència Laboral
-        </a>
-
-        <a href="./CA.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-5 py-2.5 text-center mb-2">
-            Certificats Acadèmics
-        </a>
-
-        <a href="./Activitat Adaptació al canvi.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-5 py-2.5 text-center mb-2">
-            Activitat Adaptació al Canvi
-        </a>
-
-    </ul>
-</nav>
-                </div>
-            </header>
+            <nav aria-label="Header Navigation" class="peer-checked:block hidden mt-4 sm:mt-0 sm:block">
+                <ul class="flex flex-col items-center gap-2 sm:flex-row sm:gap-x-2">
+                    <li><a href="./AC.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Activitats Complementàries</a></li>
+                    <li><a href="./PP.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Perfil Professional</a></li>
+                    <li><a href="./SS.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Soft Skills</a></li>
+                    <li><a href="./A.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Autocandidatura</a></li>
+                    <li><a href="./EL.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Experiència Laboral</a></li>
+                    <li><a href="./CA.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Certificats Acadèmics</a></li>
+                    <li><a href="./Activitat Adaptació al canvi.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all shadow-lg shadow-purple-500/20 border border-white/20">Adaptació al Canvi</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
+    <main class="relative">
+        <div class="fixed inset-0 -z-10 [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"></div>
 
-    <!--ESTE ES EL BACKGROUND MORADO-->
-    <!-- <div class="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"> -->
+        <section class="pt-24 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight uppercase leading-none">ACTIVITAT <br> <span class="text-blue-400">ADAPTACIÓ AL CANVI</span></h1>
+            <p class="text-lg md:text-xl opacity-70 max-w-2xl mx-auto uppercase mt-8">EN AQUESTA PÀGINA TROBARÀS L'ACTIVITAT SOBRE LA GESTIÓ DEL CANVI PROFESIONAL</p>
+        </section>
 
-        <div class="relative h-screen w-screen w">
-            <div class="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"></div>
-            <h1 style="color: white; text-align: center;" class="mt-40 text-8xl"><span class="Montserrat font-bold">ACTIVITAT</span></h1>
-            <h1 style="color: white; text-align: center;" class="mt-12 text-6xl"><span class="Montserrat font-bold">ADAPTACIÓ AL CANVI</span></h1>
-            <h1 style="color: white; text-align: center;" class="mt-12 text-3xl"><span class="Montserrat font-bold">EN AQUESTA PÀGINA TROBARÀS L'ACTIVITAT D'ADAPTACIÓ AL CANVI</span></h1>
-                
-        <div class="parent Montserrat font-bold mt-12 grid grid-cols-2 grid-rows-1" style="color: white; border: rgb(250, 0, 0); border-radius: 5%;">
-            <div class="flex justify-center" style="border-radius: 10%; border: 0ch;">
-                <img src="./adaptacion al cambio.png" class="justify-center items-center  w-2/3" style="border-radius: 10%;">
+        <div class="mt-24 grid md:grid-cols-2 items-start gap-12 px-[8%] pb-40">
+            <div class="flex justify-center sticky top-24">
+                <img src="./adaptacion al cambio.png" alt="Adaptació al canvi" class="rounded-3xl shadow-2xl w-full max-w-md border border-purple-500/20 transform hover:scale-105 transition-transform duration-300">
             </div>
             
-            <div class="Montserrat font-bold" style="border-radius: 10%; border: 0ch; margin-right: 10%;">
-                <h1 class="text-justify text-2xl">Aquesta activitat consistia en respondre preguntes sobre una adaptació al canvi de treball, canvi de pais, etc. Aquestes son les preguntes resposes:
-                <br>
-                <br>
-                    <li>Quines emocions em genera aquest canvi?</li>
-                    <p>Aquest canvi suposaria un estrès ja que hauria de buscar-me un altre treball, tristesa ja que recordaria els moments anteriors en l'empresa i finalment estaria emocionat perquè 
-                        coneixeria a altres companys, una altra manera de treballar, etc.</p>
-                <br>
-                    <li>Què faria per a adaptar-me?</li>
-                    <p>Buscaria una manera per desestressar-me i enviaria el meu currículum a noves empreses perquè em contractin.</p>
-                <br>
-                    <li>Quina formació necessito?</li>
-                    <p>Necessitaria tenir una formació relacionada amb l'automatització, per això estudiaria enginyeria, ciències de la computació, robòtica, etc.</p>
-                </h1>
-                <br>
-                    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-                    focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium 
-                    rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-                    <a href="https://monlaues-my.sharepoint.com/:w:/g/personal/raulmarpar_campus_monlau_com/EVMV37bfYXNFqAx-CbnnGKUBDv1A324MBZcb_-FR8aGmYA?e=ytL3Pf">CONTINUACIÓ!!</a></button>
-            
-            
+            <div class="space-y-8">
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="text-xl font-bold text-purple-400 mb-2">Quines emocions em genera aquest canvi?</h3>
+                    <p class="text-gray-300 leading-relaxed">Aquest canvi suposaria un estrès ja que hauria de buscar-me un altre treball, tristesa ja que recordaria els moments anteriors en l'empresa i finalment estaria emocionado perquè coneixeria a altres companys i una altra manera de treballar.</p>
                 </div>
+
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="text-xl font-bold text-purple-400 mb-2">Què faria per a adaptar-me?</h3>
+                    <p class="text-gray-300 leading-relaxed">Buscaria una manera per desestressar-me i enviaria el meu currículum a noves empreses perquè em contractin.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="text-xl font-bold text-purple-400 mb-2">Quina formació necessito?</h3>
+                    <p class="text-gray-300 leading-relaxed">Necessitaria tenir una formació relacionada amb l'automatització, per això estudiaria enginyeria, ciències de la computació, robòtica, etc.</p>
+                </div>
+
+                <div class="pt-6">
+                    <a href="https://monlaues-my.sharepoint.com/:w:/g/personal/raulmarpar_campus_monlau_com/EVMV37bfYXNFqAx-CbnnGKUBDv1A324MBZcb_-FR8aGmYA?e=ytL3Pf" 
+                       target="_blank"
+                       class="inline-block text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-sm px-8 py-3.5 text-center transition-all shadow-lg shadow-blue-500/20">
+                        CONTINUACIÓ DEL DOCUMENT!!
+                    </a>
+                </div>
+            </div>
         </div>
-
-</main>
-
+    </main>
 
 </body>
 </html>

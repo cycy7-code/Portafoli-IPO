@@ -1,153 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafoli - Raúl Márquez Parente</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./estilos.css">
     <link rel="shortcut icon" href="logo.jpeg"/>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .Montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        /* Aseguramos que el contenido esté por encima del video */
+        .promo {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Ajustes para el video de fondo si no están en tu estilos.css */
+        #hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+        
+        .video-container video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body style="background: #000;">
     <main id="hero">
-        <div class="promo">
-            <header class="mb-2 px-4 shadow" style="background-color: #000;">
-                <div class="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-                  <div style="height: 70px; width: 70px;">
-                    <a href="./index.html">
-                        <img src="logo.jpeg" alt="Mi logo" class="rounded">
-                </div>
-                  
-                    <a class="flex items-center text-2xl font-black">
-                        <span class="mr-2 text-3xl text-blue-600"></span>
-                        <span style="color: white;">Portafoli Raúl</span>
-                    </a>
-                        <input class="peer hidden" type="checkbox" id="navbar-open"/>
+        
+        <div class="video-container">
+            <video muted autoplay loop playsinline>
+                <source src="ezyZip.mp4" type="video/mp4">
+            </video>
+        </div>
 
-                    <label class="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden" for="navbar-open">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
+        <div class="promo">
+            <header class="mb-2 px-4 shadow bg-black border-b border-gray-900">
+                <div class="relative mx-auto flex max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+                    
+                    <div class="flex items-center">
+                        <div style="height: 60px; width: 60px;" class="mr-4">
+                            <a href="./index.html">
+                                <img src="logo.jpeg" alt="Mi logo" class="rounded-lg object-cover h-full w-full">
+                            </a>
+                        </div>
+                        <a href="./index.html" class="flex items-center text-2xl font-black">
+                            <span class="text-white">Portafoli Raúl</span>
+                        </a>
+                    </div>
+
+                    <input class="peer hidden" type="checkbox" id="navbar-open"/>
+                    <label class="absolute right-0 top-8 cursor-pointer text-xl sm:hidden" for="navbar-open">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="white" viewBox="0 0 448 512"><path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
                     </label>
                     
-                    <nav aria-label="Header Navigation" class="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0">
-    <ul class="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-4">
-
-        <a href="./AC.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Activitats Complementàries
-        </a>
-
-        <a href="./PP.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Perfil Professional
-        </a>
-
-        <a href="./SS.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Soft Skills
-        </a>
-
-        <a href="./A.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Autocandidatura
-        </a>
-
-        <a href="./EL.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Experiència Laboral
-        </a>
-
-        <a href="./CA.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-5 py-2.5 text-center mb-2">
-            Certificats Acadèmics
-        </a>
-
-        <a href="./Activitat Adaptació al canvi.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-5 py-2.5 text-center mb-2">
-            Activitat Adaptació al Canvi
-        </a>
-
-    </ul>
-</nav>
+                    <nav aria-label="Header Navigation" class="peer-checked:block hidden mt-4 sm:mt-0 sm:block">
+                        <ul class="flex flex-col items-center gap-2 sm:flex-row sm:gap-x-2">
+                            <li><a href="./AC.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[12px] px-3 py-2 text-center whitespace-nowrap transition-all shadow-lg shadow-purple-500/20">Activitats Complementàries</a></li>
+                            <li><a href="./PP.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[12px] px-3 py-2 text-center whitespace-nowrap transition-all">Perfil Professional</a></li>
+                            <li><a href="./SS.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[12px] px-3 py-2 text-center whitespace-nowrap transition-all">Soft Skills</a></li>
+                            <li><a href="./A.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[12px] px-3 py-2 text-center whitespace-nowrap transition-all">Autocandidatura</a></li>
+                            <li><a href="./EL.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[12px] px-3 py-2 text-center whitespace-nowrap transition-all">Experiència Laboral</a></li>
+                            <li><a href="./CA.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[12px] px-3 py-2 text-center whitespace-nowrap transition-all">Certificats Acadèmics</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
 
-            <div class="w-full h-full flex justify-center items-center Montserrat font-bold mt-64 text-8xl" style="color: white; text-align: center;">
+            <div class="w-full h-full flex justify-center items-center Montserrat font-bold mt-48 text-6xl md:text-8xl" style="color: white; text-align: center;">
                 <h1 id="typewriter"></h1>
             </div>
             
-            <script>
-            const words = ["HOLA!👋", "BENVINGUTS!", "HELLO!"];
-            let i = 0;
-            let j = 0;
-            let currentWord = "";
-            let isDeleting = false;
-            
-            function type() {
-              currentWord = words[i];
-              if (isDeleting) {
-                document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
-                j--;
-                if (j == 0) {
-                  isDeleting = false;
-                  i++;
-                  if (i == words.length) {
-                    i = 0;
-                  }
-                }
-              } else {
-                document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
-                j++;
-                if (j == currentWord.length) {
-                  isDeleting = true;
-                }
-              }
-              setTimeout(type,200);
-            }
-            
-            type();
-            </script>
+            <div class="px-4">
+                <h1 style="color: white; text-align: center;" class="mt-12 text-4xl md:text-6xl uppercase tracking-tighter"><span class="Montserrat font-bold">SOC RAÚL MÁRQUEZ PARENTE</span></h1>
+                <h1 style="color: white; text-align: center;" class="mt-8 text-xl md:text-3xl"><span class="Montserrat font-bold">BENVINGUTS AL MEU PORTAFOLI PERSONAL</span></h1>
+            </div>
+        </div>
+    </main>
 
-
-
-                    
-                    <h1 style="color: white; text-align: center;" class="mt-12 text-6xl"><span class="Montserrat font-bold">SOC RAÚL MÁRQUEZ PARENTE</span></h1>
-                    <h1 style="color: white; text-align: center;" class="mt-12 text-3xl"><span class="Montserrat font-bold">BENVINGUTS AL MEU PORTOFOLI PERSONAL</span></h1>
-                  </div>
-
-
-        
-<div class="video.container">
-    <video muted autoplay loop>
-    <source src="ezyZip.mp4"
-    type="video/mp4">
-    </video>
-</div>
-
-</main>
+    <script>
+    const words = ["HOLA!👋", "BENVINGUTS!", "HELLO!"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    
+    function type() {
+      currentWord = words[i];
+      if (isDeleting) {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+        j--;
+        if (j == 0) {
+          isDeleting = false;
+          i++;
+          if (i == words.length) {
+            i = 0;
+          }
+        }
+      } else {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+        j++;
+        if (j == currentWord.length) {
+          isDeleting = true;
+        }
+      }
+      setTimeout(type, 200);
+    }
+    
+    type();
+    </script>
 </body>
-
 </html>

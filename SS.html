@@ -1,160 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafoli - Raúl Márquez Parente</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.78/build/spline-viewer.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="logo.jpeg"/>
-
     <style>
-        /* asegurar que el fondo ocupe toda la altura de la página */
-        html, body { height: 100%; }
+        body { font-family: 'Montserrat', sans-serif; }
+        .Montserrat { font-family: 'Montserrat', sans-serif; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 
-<body style="background: #000; min-height: 100%;">
-    <header class="mb-2 px-4 shadow" style="background-color: #000;">
-        <div class="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-            <div style="height: 40px; width: 80px;">
-                    <a href="./index.html">
-                        <img src="logo.jpeg" alt="Mi logo" class="rounded">
-                </div>
+<body class="bg-black text-white min-h-screen">
 
-            <a class="flex items-center text-2xl font-black">
-                <span class="mr-2 text-3xl text-blue-600"></span>
-                <span style="color: white;">Portafoli Raúl</span>
-            </a>
+    <header class="mb-2 px-4 shadow bg-black border-b border-gray-900">
+        <div class="relative mx-auto flex max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+            
+            <div class="flex items-center">
+                <div style="height: 60px; width: 60px;" class="mr-4">
+                    <a href="./index.html">
+                        <img src="logo.jpeg" alt="Mi logo" class="rounded-lg object-cover h-full w-full">
+                    </a>
+                </div>
+                <a href="./index.html" class="flex items-center text-2xl font-black">
+                    <span class="text-white">Portafoli Raúl</span>
+                </a>
+            </div>
 
             <input class="peer hidden" type="checkbox" id="navbar-open"/>
-
-            <label class="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden" for="navbar-open">
-                <span class="sr-only">Toggle Navigation</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
+            <label class="absolute right-0 top-8 cursor-pointer text-xl sm:hidden" for="navbar-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="white" viewBox="0 0 448 512"><path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
             </label>
             
-          <nav aria-label="Header Navigation" class="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0">
-    <ul class="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-4">
-
-        <a href="./AC.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Activitats Complementàries
-        </a>
-
-        <a href="./PP.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Perfil Professional
-        </a>
-
-        <a href="./SS.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Soft Skills
-        </a>
-
-        <a href="./A.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Autocandidatura
-        </a>
-
-        <a href="./EL.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-4 py-2.5 text-center mb-2">
-            Experiència Laboral
-        </a>
-
-        <a href="./CA.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-5 py-2.5 text-center mb-2">
-            Certificats Acadèmics
-        </a>
-
-        <a href="./Activitat Adaptació al canvi.html" 
-           class="flex items-center justify-center w-full sm:w-auto text-white bg-gradient-to-br 
-                  from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none 
-                  focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm 
-                  px-5 py-2.5 text-center mb-2">
-            Activitat Adaptació al Canvi
-        </a>
-
-    </ul>
-</nav>
-
-
-
+            <nav aria-label="Header Navigation" class="peer-checked:block hidden mt-4 sm:mt-0 sm:block">
+                <ul class="flex flex-col items-center gap-2 sm:flex-row sm:gap-x-2">
+                    <li><a href="./AC.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Activitats Complementàries</a></li>
+                    <li><a href="./PP.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Perfil Professional</a></li>
+                    <li><a href="./SS.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Soft Skills</a></li>
+                    <li><a href="./A.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all shadow-lg shadow-purple-500/20">Autocandidatura</a></li>
+                    <li><a href="./EL.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Experiència Laboral</a></li>
+                    <li><a href="./CA.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Certificats Acadèmics</a></li>
+                    <li><a href="./Activitat Adaptació al canvi.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[10px] lg:text-[11px] px-3 py-2 text-center whitespace-nowrap transition-all">Adaptació al Canvi</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Contenedor principal que asegura que el fondo llegue hasta el final -->
-    <div class="relative min-h-screen w-screen">
-        <!-- fondo morado absoluto -->
-        <div class="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"></div>
+    <main class="relative">
+        <div class="fixed inset-0 -z-10 [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"></div>
 
-        <!-- contenido sobre el fondo -->
-        <div class="container mx-auto px-4">
-            <h1 class="text-center text-white mt-32 text-9xl Montserrat font-bold">SMX 1 CURS</h1>
-            <h1 class="text-center text-white mt-6 text-8xl Montserrat font-bold">SOFT</h1>
-            <h1 class="text-center text-white mt-4 text-6xl Montserrat font-bold">SKILLS</h1>
-            <h1 class="text-center text-white mt-6 text-3xl Montserrat font-bold">EN AQUESTA PÁGINA TROBARÁS LES MEVES SOFT SKILLS</h1>
+        <section class="pt-24 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight uppercase">SMX 1 CURS</h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-blue-400 mb-6 uppercase">SOFT SKILLS</h2>
+            <p class="text-lg md:text-xl opacity-70 max-w-2xl mx-auto uppercase">EN AQUESTA PÀGINA TROBARÀS LES MEVES SOFT SKILLS</p>
+        </section>
 
-            <div class="parent Montserrat font-bold mt-12 grid grid-cols-2 gap-8" style="color: white;">
-                <div class="flex justify-center">
-                    <img src="./BARCELONA ACTIVA.png" alt="Imagen Barcelona Actva" class="w-3/4 max-w-sm object-contain" style="border-radius: 10%;">
-                </div>
-                <div>
-                    <h2 class="text-2xl text-justify">
-                        En aquesta captura es pot veure el meu nivell de desenvolupament de les meves competències claus.
-                        Aquests nivells serveixen per a avaluar i comprendre el grau de domini o progrés que una persona té en habilitats essencials que 
-                        li permeten desembolicar-se de manera efectiva en diferents àmbits de la vida, com el personal, social, laboral o acadèmic. 
-                        Aquestes competències solen incloure aspectes com la comunicació, el pensament crític, la resolució de problemes, la col·laboració, l'autoregulació, entre altres.
-                    </h2>
-                </div>
+        <div class="mt-24 grid md:grid-cols-2 items-center gap-12 px-[8%] mb-20">
+            <div class="flex justify-center order-2 md:order-1">
+                <img src="./BARCELONA ACTIVA.png" alt="Imagen Barcelona Activa" class="rounded-3xl shadow-2xl w-full max-w-md border border-purple-500/20 transform hover:scale-105 transition-transform duration-300">
             </div>
-
-            <div class="parent Montserrat font-bold mt-12 grid grid-cols-2 gap-8" style="color: white;">
-                <div class="flex justify-center">
-                    <img src="./DAFO.png" alt="DAFO" class="w-3/4 max-w-sm object-contain" style="border-radius: 10%;">
-                </div>
-                <div>
-                    <h2 class="text-2xl text-justify">
-                        En aquesta captura pots veure la meva anàlisi DAFO.
-                        Aquesta anàlisi serveix per a avaluar de manera estructurada les meves fortaleses, 
-                        febleses, oportunitats i amenaces en relació amb els meus objectius personals, professionals o de desenvolupament.
-                    </h2>
-
-                    <div class="flex justify-center mt-8">
-                        <button type="button" class="text-white bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5">
-                            <a href="https://monlaues-my.sharepoint.com/:b:/g/personal/raulmarpar_campus_monlau_com/EfIOXA0T0OtPi7KYw5ZYRFsBiXBGTMBsws-kjBcQpmJtYQ?e=rNhWuc">ENLLAÇ AL DOCUMENT</a>
-                        </button>
-                    </div>
-                </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <h3 class="text-3xl font-bold text-purple-400 border-l-4 border-purple-500 pl-4 uppercase">Competències Claus</h3>
+                <p class="text-justify text-lg leading-relaxed text-gray-200">
+                    En aquesta captura es pot veure el meu nivell de desenvolupament de les meves competències claus. 
+                    Aquests nivells serveixen per avaluar el grau de domini en habilitats essencials per desembolicar-se de manera efectiva en l'àmbit personal i laboral.
+                </p>
+                <p class="text-justify text-lg leading-relaxed text-gray-200">
+                    Inclouen aspectes com la comunicació, el pensament crític, la resolució de problemes i la col·laboració.
+                </p>
             </div>
-
-            <!-- Añadir espacio final para que fondo se vea hasta abajo -->
-            <div class="h-24"></div>
         </div>
-        <!-- Separador grueso y texto centrado al final -->
-    <hr class="my-20 border-t-[28px] border-black rounded-full w-3/4 mx-auto">
-    <h1 style="color: white; text-align: center;" class="mt-16 text-9xl"><span class="Montserrat font-bold">SMX 2 CURS</span></h1>
-</div>
-    </div>
+
+        <div class="mt-24 grid md:grid-cols-2 items-center gap-12 px-[8%] mb-20">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-blue-400 border-l-4 border-blue-500 pl-4 uppercase">Anàlisi DAFO</h3>
+                <p class="text-justify text-lg leading-relaxed text-gray-200">
+                    Aquí pots veure la meva anàlisi DAFO personal. Aquesta eina serveix per avaluar de manera estructurada les meves fortaleses, febleses, oportunitats i amenaces.
+                </p>
+                <div class="flex justify-center md:justify-start mt-8">
+                    <a href="https://monlaues-my.sharepoint.com/:b:/g/personal/raulmarpar_campus_monlau_com/EfIOXA0T0OtPi7KYw5ZYRFsBiXBGTMBsws-kjBcQpmJtYQ?e=rNhWuc" 
+                       target="_blank"
+                       class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-sm px-6 py-3 transition-all shadow-lg">
+                        ENLLAÇ AL DOCUMENT
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="./DAFO.png" alt="Anàlisi DAFO" class="rounded-3xl shadow-2xl w-full max-w-md border border-blue-500/20 transform hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+
+        <div class="flex justify-center my-32">
+            <hr class="border-t-[16px] border-black rounded-full w-2/3 shadow-xl">
+        </div>
+
+        <section class="text-center px-4 pb-40">
+            <h1 class="text-6xl md:text-8xl font-bold mb-10 uppercase">SMX 2 CURS</h1>
+            <p class="text-xl opacity-60">Contingut en desenvolupament...</p>
+        </section>
+
+    </main>
+
 </body>
 </html>
