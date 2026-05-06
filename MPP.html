@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecte Professional - Raúl Márquez Parente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.jpeg"/>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .Montserrat { font-family: 'Montserrat', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body class="bg-black text-white min-h-screen">
+
+    <header class="mb-2 px-4 shadow bg-black border-b border-gray-900">
+        <div class="relative mx-auto flex max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+            
+            <div class="flex items-center">
+                <div style="height: 60px; width: 60px;" class="mr-4">
+                    <a href="./index.html">
+                        <img src="logo.jpeg" alt="El meu logo" class="rounded-lg object-cover h-full w-full">
+                    </a>
+                </div>
+                <a href="./index.html" class="flex items-center text-2xl font-black">
+                    <span class="text-white">Portafoli Raúl</span>
+                </a>
+            </div>
+
+            <input class="peer hidden" type="checkbox" id="navbar-open"/>
+            <label class="absolute right-0 top-8 cursor-pointer text-xl sm:hidden" for="navbar-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="white" viewBox="0 0 448 512"><path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
+            </label>
+            
+            <nav aria-label="Header Navigation" class="peer-checked:block hidden mt-4 sm:mt-0 sm:block">
+                <ul class="flex flex-col items-center gap-2 sm:flex-row sm:gap-x-1">
+                    <li><a href="./AC.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Activitats Complementàries</a></li>
+                    <li><a href="./PP.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Perfil Professional</a></li>
+                    <li><a href="./SS.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Soft Skills</a></li>
+                    <li><a href="./A.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Autocandidatura</a></li>
+                    <li><a href="./EL.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Experiència Laboral</a></li>
+                    <li><a href="./CA.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Certificats Acadèmics</a></li>
+                    <li><a href="./Activitat Adaptació al canvi.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">Adaptació al Canvi</a></li>
+                    <li><a href="./MPP.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all shadow-lg shadow-purple-500/20">El meu projecte professional</a></li>
+                    <li><a href="./PI.html" class="flex items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-lg text-[9px] lg:text-[10px] px-2 py-2 text-center whitespace-nowrap transition-all">El meu projecte innovador</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative">
+        <div class="fixed inset-0 -z-10 [background:radial-gradient(125%_125%_at_50%_10%,#000000_40%,#6633ee_100%)]"></div>
+
+        <section class="pt-24 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight uppercase">PROJECTE</h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-purple-400 mb-6 uppercase">PROFESSIONAL</h2>
+            <p class="text-lg md:text-xl opacity-70 max-w-2xl mx-auto uppercase">EL MEU CAMÍ I OBJECTIUS EN EL MÓN TECNOLÒGIC</p>
+        </section>
+        
+        <!-- Especialización -->
+        <section class="mt-24 px-[8%]">
+            <h3 class="text-3xl font-bold text-blue-400 border-l-4 border-blue-500 pl-4 uppercase mb-12">Especialització</h3>
+            
+            <!-- Ciberseguridad -->
+            <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                <div class="space-y-6">
+                    <h4 class="text-2xl font-bold text-white uppercase">Ciberseguretat</h4>
+                    <p class="text-justify text-lg leading-relaxed text-gray-200">
+                        El meu objectiu és convertir-me en un expert en la protecció de sistemes i xarxes. M'interessa especialment l'anàlisi de vulnerabilitats i la seguretat ofensiva (Pentesting) per ajudar les empreses a blindar les seves dades més crítiques contra amenaces digitals.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Ciberseguretat" class="rounded-3xl shadow-2xl w-full max-w-md border border-blue-500/20 transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+
+            <!-- Ingeniería Informática -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Enginyeria Informàtica" class="rounded-3xl shadow-2xl w-full max-w-md border border-purple-500/20 transform hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="space-y-6 order-1 md:order-2">
+                    <h4 class="text-2xl font-bold text-white uppercase">Enginyer Informàtic</h4>
+                    <p class="text-justify text-lg leading-relaxed text-gray-200">
+                        Aspiro a obtenir el grau d'Enginyeria per posseir una base sòlida en arquitectura de programari, gestió de projectes i algorísmia avançada. Aquesta formació em permetrà liderar equips tècnics i dissenyar solucions tecnològiques complexes des de zero.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex justify-center my-20">
+            <hr class="border-t-[2px] border-gray-800 w-2/3">
+        </div>
+
+        <!-- Itinerario Formativo -->
+        <section class="px-[8%] mb-20">
+            <h3 class="text-3xl font-bold text-purple-400 border-l-4 border-purple-500 pl-4 uppercase mb-12">Itinerari Formatiu</h3>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Ruta Ciberseguridad -->
+                <div class="bg-gray-900/50 p-6 rounded-3xl border border-blue-500/20">
+                    <h4 class="text-xl font-bold text-blue-400 mb-6 uppercase">Ruta Ciberseguretat</h4>
+                    <ul class="space-y-4 text-gray-200">
+                        <li><strong class="text-white">Tipus de formació:</strong> Curs d'Especialització en Ciberseguretat en Entorns de les Tecnologies de la Informació (Màster de FP).</li>
+                        <li><strong class="text-white">Durada i cost:</strong> 1 curs acadèmic (aprox. 720h). Gratuït en centres públics / Preu variable en centres concertats de Barcelona.</li>
+                        <li><strong class="text-white">On cursar-lo:</strong> 
+                            <ul class="ml-4 mt-2 list-disc opacity-80">
+                                <li>Monlau (Continuïtat directa des de la meva formació actual).</li>
+                                <li>Institut Sabadell / IES Bernat el Ferrer.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ruta Ingeniería -->
+                <div class="bg-gray-900/50 p-6 rounded-3xl border border-purple-500/20">
+                    <h4 class="text-xl font-bold text-purple-400 mb-6 uppercase">Ruta Enginyeria Informàtica</h4>
+                    <ul class="space-y-4 text-gray-200">
+                        <li><strong class="text-white">Tipus de formació:</strong> Grau Universitari en Enginyeria Informàtica.</li>
+                        <li><strong class="text-white">Durada i cost:</strong> 4 anys (240 ECTS). Preu públic aprox. 20-30€ per crèdit (entre 1.200€ i 2.000€ per curs segons taxes i beques).</li>
+                        <li><strong class="text-white">On cursar-lo:</strong> 
+                            <ul class="ml-4 mt-2 list-disc opacity-80">
+                                <li>UPC (FIB) - Barcelona.</li>
+                                <li>UAB - Bellaterra (Cerdanyola del Vallès).</li>
+                                <li>UPF - Barcelona.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promoción y Empresas -->
+        <section class="px-[8%] pb-40">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Promoción Personal -->
+                <div class="bg-gray-900/30 p-8 rounded-3xl border border-blue-500/10 hover:border-blue-500/40 transition-all h-full">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6 uppercase">Promoció Personal</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span><strong class="text-white">Xarxes Professionals:</strong> Actualització constant del meu perfil a LinkedIn per connectar amb reclutadors del sector IT.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span><strong class="text-white">Portafoli Tècnic:</strong> Publicació de projectes propis, scripts d'automatització i eines de seguretat a GitHub.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span><strong class="text-white">Certificacions:</strong> Preparació per a exàmens industrials com CompTIA Security+ o Cisco CCNA.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span><strong class="text-white">Formació Contínua:</strong> Finalització dels meus estudis a Monlau amb el màxim aprofitament tècnic.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Empresas de Futuro -->
+                <div class="bg-gray-900/30 p-8 rounded-3xl border border-purple-500/10 hover:border-purple-500/40 transition-all h-full">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-6 uppercase">Empreses de Futur</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span><strong class="text-white">Telefónica Tech:</strong> Líder mundial en serveis digitals de ciberseguretat, Cloud i IoT, ideal per desenvolupar una carrera d'alt nivell tècnic.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span><strong class="text-white">Oracle Corporation:</strong> Referent en gestió de bases de dades i solucions Cloud, oferint un entorn d'aprenentatge en arquitectures empresarials robustes.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span><strong class="text-white">Indra (Minsait):</strong> Consultora de referència per a grans projectes de defensa i tecnologia a Espanya.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span><strong class="text-white">Ecosistema 22@:</strong> Interès en els diversos hubs tecnològics i startups d'innovació situats al Poblenou, Barcelona.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="flex justify-center pb-20">
+            <a href="./index.html" class="text-white bg-gradient-to-br from-gray-700 to-black hover:from-gray-600 hover:to-gray-900 border border-gray-600 font-medium rounded-full text-lg px-10 py-3 text-center transition-all shadow-xl">
+                Tornar a l'Inici
+            </a>
+        </footer>
+    </main>
+</body>
+</html>
